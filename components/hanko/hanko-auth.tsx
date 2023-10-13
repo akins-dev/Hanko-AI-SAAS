@@ -36,13 +36,7 @@ const HankoAuth = () => {
     });
   }, []);
 
-  return (
-    <div className="flex min-h-screen justify-center items-center bg-slate-50">
-      <div className="bg-white p-5 rounded-2xl shadow-md">
-        <hanko-auth />
-      </div>
-    </div>
-  );
+  return <hanko-auth />
 }
 
 export default HankoAuth;

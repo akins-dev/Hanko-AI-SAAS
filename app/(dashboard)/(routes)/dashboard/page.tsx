@@ -4,8 +4,8 @@ import Profile from "@/components/hanko/profile";
 const DashboardPage = () => {
   return (
     <div>
-       <Profile />
        <Logout />
+       <Profile />
     </div>
   )
 }

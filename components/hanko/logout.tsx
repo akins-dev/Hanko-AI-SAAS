@@ -4,6 +4,9 @@ import { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
 
 import { Hanko } from "@teamhanko/hanko-elements";
+import { LogOut } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
 
 const hankoApi = process.env.NEXT_PUBLIC_HANKO_API_URL;
 
@@ -44,7 +47,9 @@ const Logout = () => {
   };
   return (
     <>
-      <button type="button" onClick={logout}>Logout</button>
+      <Button variant="destructive" className="transition" onClick={logout}>
+        <LogOut className="text-white" />
+      </Button>
     </>
   );
 };

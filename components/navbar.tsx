@@ -12,7 +12,7 @@ const NavBar = () => {
         <Button variant="ghost" size="icon" className="md:hidden">
             <Menu />
         </Button>
-        <div className="flex w-full justify-end gap-x-2">
+        <div className="flex w-full justify-end gap-x-3">
             <Profile />
             <Logout />
         </div>

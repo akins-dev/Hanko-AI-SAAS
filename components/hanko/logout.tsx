@@ -47,8 +47,8 @@ const Logout = () => {
   };
   return (
     <>
-      <Button variant="destructive" className="transition" onClick={logout}>
-        <LogOut className="text-white" />
+      <Button variant="ghost" size="icon" onClick={logout}>
+        <LogOut className="text-black" />
       </Button>
     </>
   );

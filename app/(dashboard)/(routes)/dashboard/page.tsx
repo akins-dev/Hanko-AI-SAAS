@@ -1,11 +1,20 @@
-import Logout from "@/components/hanko/logout";
-import Profile from "@/components/hanko/profile";
+"use client";
+
+import { useEffect, useState } from "react";
 
 const DashboardPage = () => {
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [isMounted])
+
+  if (!isMounted) {
+    return null;
+  }
+
   return (
     <div>
-       <Logout />
-       <Profile />
     </div>
   )
 }

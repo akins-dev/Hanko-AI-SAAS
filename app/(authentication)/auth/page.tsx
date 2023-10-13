@@ -1,3 +1,4 @@
+"use client";
 
 import HankoAuth from "@/components/hanko/hanko-auth";
 

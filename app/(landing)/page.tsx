@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
+import HankoAuth from "@/components/hanko/hanko-auth";
 
 export default function Home() {
   return (
     <div>
-      Landing Page (Unprotected)
+      <HankoAuth />
     </div>
   )
 }

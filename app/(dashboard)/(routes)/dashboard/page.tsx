@@ -1,9 +1,11 @@
-import { Button } from "@/components/ui/button";
+import Logout from "@/components/hanko/logout";
+import Profile from "@/components/hanko/profile";
 
 const DashboardPage = () => {
   return (
     <div>
-        Dashboard Page (Protected)
+       <Profile />
+       <Logout />
     </div>
   )
 }

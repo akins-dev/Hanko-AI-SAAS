@@ -1,17 +1,13 @@
 "use client";
 
-import { Menu } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
 import Profile from "@/components/hanko/profile";
 import Logout from "@/components/hanko/logout";
+import MobileSidebar from "@/components/mobile-sidebar";
 
 const NavBar = () => {
   return (
     <div className="flex items-center p-4">
-        <Button variant="ghost" size="icon" className="md:hidden">
-            <Menu />
-        </Button>
+      <MobileSidebar />
         <div className="flex w-full justify-end gap-x-3">
             <Profile />
             <Logout />

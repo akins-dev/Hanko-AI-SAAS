@@ -47,7 +47,7 @@ const Logout = () => {
   };
   return (
     <>
-      <Button size="icon" className="bg-accent hover:bg-rose-500 hover:text-accent-foreground" onClick={logout}>
+      <Button variant="ghost" size="icon" onClick={logout}>
         <LogOut className="text-black" />
       </Button>
     </>

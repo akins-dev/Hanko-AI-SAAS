@@ -4,38 +4,44 @@ import { useEffect, useState } from "react";
 
 import { register } from "@teamhanko/hanko-elements";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { 
+  Avatar, 
+  AvatarFallback, 
+  AvatarImage 
+} from "@/components/ui/avatar";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+
 
 const hankoApi = process.env.NEXT_PUBLIC_HANKO_API_URL || "";
 
 const Profile = () => {
-  const [openState, setOpenState] = useState(false);
-
   useEffect(() => {
     register(hankoApi ?? "").catch((error) => {
       throw new Error("ERROR[HANKO PROFILE]", error)
     });
   }, []);
 
-  const openProfile = () => {
-    setOpenState(!openState);
-  };
-
   return (
     <>
-      <button type="button" onClick={openProfile}>
-        <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" />
-          <AvatarFallback>CN</AvatarFallback>
-        </Avatar>
-      </button>
-      {openState && (
-        <div className="top-14 absolute">
-          <section className=" w-[450px] h-auto rounded-md bg-white shadow-md outline outline-1 p-5">
+      <Sheet>
+        <SheetTrigger>
+          <button >
+            <Avatar>
+              <AvatarImage src="https://github.com/shadcn.png" />
+              <AvatarFallback>X</AvatarFallback>
+            </Avatar>
+          </button>
+        </SheetTrigger>
+        <SheetContent side="right" className="p-4">
+          <section >
             <hanko-profile />
           </section>
-        </div>
-      )}
+        </SheetContent>
+      </Sheet>
     </>
   );
 };

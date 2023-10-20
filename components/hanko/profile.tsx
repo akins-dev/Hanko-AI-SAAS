@@ -30,8 +30,8 @@ const Profile = () => {
         </Avatar>
       </button>
       {openState && (
-        <div className="top-14 absolute z-[80]">
-          <section className=" w-[450px] h-auto rounded-2xl bg-white shadow-md p-5">
+        <div className="top-14 absolute">
+          <section className=" w-[450px] h-auto rounded-md bg-white shadow-md outline outline-1 p-5">
             <hanko-profile />
           </section>
         </div>

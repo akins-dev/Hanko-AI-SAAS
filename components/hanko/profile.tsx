@@ -9,7 +9,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import UserAvatar from "@/components/user-avatar";
+import {UserAvatar} from "@/components/user-avatar";
 
 
 const hankoApi = process.env.NEXT_PUBLIC_HANKO_API_URL || "";

@@ -6,15 +6,19 @@ import {
   AvatarImage 
 } from "@/components/ui/avatar";
 
-const UserAvatar = () => {
+interface UserAvatarProps {
+  customClassName?: string
+}
+
+export const UserAvatar = ({
+  customClassName
+}: UserAvatarProps) => {
   return (
     <div>
-      <Avatar>
+      <Avatar className={customClassName}>
         <AvatarImage src="https://github.com/shadcn.png" alt="user avatar" />
         <AvatarFallback>X</AvatarFallback>
       </Avatar>
     </div>
   )
 }
-
-export default UserAvatar

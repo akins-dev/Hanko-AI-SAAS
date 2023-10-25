@@ -9,7 +9,7 @@ const openai = new OpenAI({
 });
 
 
-async function POST(
+export async function POST(
     req: Request
 ) {
     try {
@@ -34,7 +34,6 @@ async function POST(
             messages
         });
 
-        console.log(response);
         return NextResponse.json(response.choices[0].message);
 
     } catch (error) {

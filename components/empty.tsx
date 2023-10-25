@@ -6,7 +6,7 @@ interface EmptyProps {
   label: string
 }
 
-const Empty = ({
+export const Empty = ({
   label
 }: EmptyProps) => {
   return (
@@ -24,5 +24,3 @@ const Empty = ({
     </div>
   )
 }
-
-export default Empty

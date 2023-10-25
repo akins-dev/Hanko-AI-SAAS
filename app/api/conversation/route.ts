@@ -8,6 +8,10 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
 
+const instructionMessage: OpenAI.Chat.Completions.ChatCompletionMessageParam = {
+  role: "system",
+  content: "You are a conversation bot."
+};
 
 export async function POST(
     req: Request
@@ -31,7 +35,7 @@ export async function POST(
 
         const response = await openai.chat.completions.create({
             model: "gpt-3.5-turbo",
-            messages
+            messages: [instructionMessage, ...messages]
         });
 
         return NextResponse.json(response.choices[0].message);

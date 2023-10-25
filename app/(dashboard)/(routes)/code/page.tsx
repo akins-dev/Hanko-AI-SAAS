@@ -1,13 +1,12 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-
 import * as z from "zod";
 import axios from "axios";
 import OpenAI from "openai";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Code } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import {
@@ -19,13 +18,14 @@ import {
 import { cn } from "@/lib/utils";
 import {Empty} from "@/components/empty";
 import {Loader} from "@/components/loader";
-import { formSchema } from "./constants";
 import { Input } from "@/components/ui/input"
 import { Heading } from "@/components/heading";
 import { Button } from "@/components/ui/button";
 import { Markdown } from "@/components/markdown";
 import { BotAvatar } from "@/components/bot-avatar";
 import { UserAvatar } from "@/components/user-avatar";
+
+import { formSchema } from "./constants";
 
 const CodePage = () => {
   const router = useRouter()

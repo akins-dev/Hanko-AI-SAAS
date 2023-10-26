@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { Code, ImageIcon, LayoutDashboard, MessageSquare, Music, Settings, VideoIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import AlphaGPT from "./alpha-gpt";
 
 const routes = [
   {
@@ -67,9 +68,7 @@ const Sidebar = () => {
                         src="/logo.png"
                     />
                 </div>
-                <h1 className="text-3xl clash-display text-center font-bold">
-                    Alpha<span className="text-center bg-clip-text text-transparent bg-gradient-to-r from-[#d03972] to-[#a24391]">GPT</span>
-                </h1>
+                <AlphaGPT />
             </Link>
             <div className="space-y-1">
               {routes?.map((route) => (

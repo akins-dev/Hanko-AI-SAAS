@@ -1,7 +1,5 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-
 import { 
   ArrowRight, 
   Code, 
@@ -10,9 +8,10 @@ import {
   Music, 
   VideoIcon 
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
-import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { Card } from "@/components/ui/card";
 
 const tools = [
   {
@@ -46,8 +45,8 @@ const tools = [
   {
     label: "Code Generation",
     icon: Code,
-    color: "text-green7500",
-    bgColor: "bg-green7500/10",
+    color: "text-green-700",
+    bgColor: "bg-green-700/10",
     href: "/code"
   }
 ];

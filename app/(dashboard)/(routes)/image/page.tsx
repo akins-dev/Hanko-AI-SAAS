@@ -96,7 +96,7 @@ const ImagePage = () => {
                     <Input
                       className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                       disabled={isLoading} 
-                      placeholder="Picture of a black hole." 
+                      placeholder="Picture of Jupiter in space." 
                       {...field}
                     />
                   </FormControl>
@@ -177,7 +177,7 @@ const ImagePage = () => {
           <Empty label="No images generated." />
         )}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-8 pb-8">
-          {photos.map((src) => (
+          {photos?.map((src) => (
             <Card key={src} className="rounded-lg overflow-hidden">
               <div className="relative aspect-square">
                 <Image

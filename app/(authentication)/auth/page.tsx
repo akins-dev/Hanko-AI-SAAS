@@ -1,6 +1,8 @@
-"use client";
+"use client"
 
-import HankoAuth from "@/components/hanko/hanko-auth";
+import dynamic from 'next/dynamic';
+
+const HankoAuth = dynamic(() => import('@/components/hanko/hanko-auth'), { ssr: false })
 
 const Auth = () => {
   return (
@@ -10,4 +12,4 @@ const Auth = () => {
   )
 }
 
-export default Auth
+export default Auth;

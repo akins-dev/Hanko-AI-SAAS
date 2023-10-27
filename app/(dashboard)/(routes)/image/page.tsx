@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import * as z from "zod";
 import axios from "axios";
@@ -187,7 +187,7 @@ const ImagePage = () => {
                 />
               </div>
               <CardFooter className="p-2">
-                <Button onClick={() => window.open(src)} variant="secondary" className="w-full">
+                <Button onClick={(e) => window.open(src)} variant="secondary" className="w-full">
                   <Download className="h-4 w-4 mr-2" />
                   Download
                 </Button>
